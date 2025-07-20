@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Georgio & [Partner's Name] – Wedding Invitation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="intro-overlay">
+      <div class="intro-content">
+        <h1 class="intro-title">Welcome to Chahid Frangieh and Rita Abou Nader Wedding Invitation</h1>
+        
+        <div class="intro-buttons">
+          <button id="open-with-music">Open with Music</button>
+          <button id="open-without-music">Open without Music</button>
+        </div>
+      </div>
+    </div>
+    <audio id="wedding-music" src="Ricchi E Poveri - Sara Perche Ti Amo (Testo  Lyrics).mp3" loop></audio>
+    <div class="main-content">
+      <div class="wedding-ceremony-slide">
+        <h2 class="slide-title">Wedding Ceremony</h2>
+        <div class="ceremony-info">
+          <div class="ceremony-detail">
+            <span class="ceremony-icon">
+              <!-- Clock SVG -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="#800020" stroke-width="2" fill="none"/>
+                <path d="M12 7v5l3 2" stroke="#800020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="ceremony-text">
+              18:00 
+            </span>
+            <span class="ceremony-timezone">(Beirut Time)</span>
+          </div>
+          <div class="ceremony-detail">
+            <span class="ceremony-icon">
+              <!-- Pin SVG -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21s-6-5.686-6-10A6 6 0 1 1 18 11c0 4.314-6 10-6 10z" stroke="#800020" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="11" r="2.5" stroke="#800020" stroke-width="2" fill="none"/>
+              </svg>
+            </span>
+            <span class="ceremony-text">
+              St. George Maronite Cathedral
+            </span>
+          </div>
+        </div>
+        <a class="ceremony-map-btn" href="https://www.openstreetmap.org/?mlat=33.8959&mlon=35.5056#map=19/33.8959/35.5056" target="_blank" rel="noopener">Locate on Map</a>
+      </div>
+      <div class="wedding-party-slide">
+        <h2 class="slide-title">Wedding Party</h2>
+        <div class="ceremony-info">
+          <div class="ceremony-detail">
+            <span class="ceremony-icon">
+              <!-- Clock SVG -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" stroke="#800020" stroke-width="2" fill="none"/>
+                <path d="M12 7v5l3 2" stroke="#800020" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="ceremony-text">
+              8:00 PM 
+            </span>
+            <span class="ceremony-timezone">(Beirut Time)</span>
+          </div>
+          <div class="ceremony-detail">
+            <span class="ceremony-icon">
+              <!-- Pin SVG -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21s-6-5.686-6-10A6 6 0 1 1 18 11c0 4.314-6 10-6 10z" stroke="#800020" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="11" r="2.5" stroke="#800020" stroke-width="2" fill="none"/>
+              </svg>
+            </span>
+            <span class="ceremony-text">
+              Jupiter - The Royal Venue<br />Bnachii Lake, Lebanon
+            </span>
+          </div>
+        </div>
+        <a class="ceremony-map-btn" href="https://www.openstreetmap.org/?mlat=34.3636&mlon=35.9772#map=17/34.3636/35.9772" target="_blank" rel="noopener">Locate on Map</a>
+      </div>
+      <div class="reservation-slide">
+        <h2 class="slide-title">Be Our Guest</h2>
+        <p class="reservation-deadline">Please reply before June 15, 2025</p>
+        <h3 class="names">Mr. Chahid Frangieh & Ms. Rita Abou Nader</h3>
+
+        <form action="">
+          <div class="input" id="attending">
+            <label>Are you attending?</label>
+            <div class="attending-selection-container">
+              <div class="attending-radio-container">
+                <input
+                  type="radio"
+                  name="attending"
+                  id="attending-yes"
+                  value="yes"
+                  hidden
+                />
+                <label for="attending-yes" class="heart-label">
+                  <div class="heart"></div>
+                  <p>Yes Attending</p>
+                </label>
+              </div>
+              <div class="attending-radio-container">
+                <input
+                  type="radio"
+                  name="attending"
+                  id="attending-no"
+                  value="no"
+                  hidden
+                />
+                <label for="attending-no" class="heart-label">
+                  <div class="heart"></div>
+                  <p>Not Attending</p>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="input" id="persons">
+            <label for="persons-select">Number of persons</label>
+            <select id="persons-select">
+              <option value="None">None</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+
+          <div class="input" id="persons">
+            <label for="phoneNumber">Phone number</label>
+            <input type="text" name="phone&nbsp;number" id="phoneNumber" />
+          </div>
+
+          <div class="input">
+            <textarea placeholder="Share your love & wishes"></textarea>
+          </div>
+
+          <button type="submit">RSVP</button>
+        </form>
+
+        <p>SAY GOODNIGHT TO YOUR LITTLE ONES</p>
+      </div>
+    </div>
+    <button id="music-tone" class="music-tone" aria-label="Toggle music">
+      <svg width="40" height="40" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <script>
+      const yesRadio = document.getElementById("attending-yes");
+      const noRadio = document.getElementById("attending-no");
+      const personsSelect = document.getElementById("persons-select");
+      const musicTone = document.getElementById('music-tone');
+      musicTone.style.display = 'none';
+
+      function updatePersonsState() {
+        if (noRadio.checked) {
+          personsSelect.value = "None";
+          personsSelect.disabled = true;
+        } else {
+          personsSelect.disabled = false;
+        }
+      }
+
+      yesRadio.addEventListener("change", updatePersonsState);
+      noRadio.addEventListener("change", updatePersonsState);
+
+      window.addEventListener("DOMContentLoaded", updatePersonsState);
+
+      // Music and intro overlay logic
+      const overlay = document.getElementById('intro-overlay');
+      const openWithMusic = document.getElementById('open-with-music');
+      const openWithoutMusic = document.getElementById('open-without-music');
+      const audio = document.getElementById('wedding-music');
+      let musicEnabled = false;
+
+      function hideOverlay() {
+        overlay.classList.add('hide');
+        setTimeout(() => { overlay.style.display = 'none'; }, 600);
+      }
+
+      // Remove old music toggle logic and add new for music-fab
+      // musicFab.style.display = 'none'; // This line is no longer needed
+      overlay.addEventListener('transitionend', () => {
+        musicTone.style.display = 'block';
+      });
+      openWithMusic.addEventListener('click', () => {
+        musicTone.classList.add('playing');
+        audio.volume = 0.7;
+        audio.play();
+        hideOverlay();
+      });
+      openWithoutMusic.addEventListener('click', () => {
+        musicTone.classList.remove('playing');
+        audio.pause();
+        hideOverlay();
+      });
+      musicTone.addEventListener('click', () => {
+        if (musicTone.classList.contains('playing')) {
+          musicTone.classList.remove('playing');
+          audio.pause();
+        } else {
+          musicTone.classList.add('playing');
+          audio.play();
+        }
+      });
+    </script>
+  </body>
+</html>
