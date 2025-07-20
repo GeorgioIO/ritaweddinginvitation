@@ -7,7 +7,28 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Belfast';
+  src: url('./Belfast-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aerotis';
+  src: url('./Aerotis.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Acumin Variable Concept';
+  src: url('./Acumin-Variable-Concept.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 50% 125%;
+  font-style: normal italic;
+}
 :root {
+  --main-font-stack: 'Belfast', 'Century Gothic', 'Aerotis', 'Javanese Text', 'Acumin Variable Concept', Arial, sans-serif;
+  --acumin-semicondensed-thinitalic: 'Acumin Variable Concept', Arial, sans-serif;
   --cormorant-font: "Cormorant Upright", serif;
   --cormorant-sc: "Cormorant SC", serif;
   --daria: #5a0a18;
@@ -26,7 +47,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: var(--cormorant-sc);
+  font-family: var(--main-font-stack);
   background: url("./images/back.jpg");
   background-size: cover;
   background-position: center;
@@ -88,11 +109,15 @@ html {
   -webkit-backdrop-filter: blur(12px);
 }
 
+
+
 .slide-title {
-  font-family: var(--cormorant-font);
+  font-family: var(--acumin-semicondensed-thinitalic);
+  font-stretch: semi-condensed;
+  font-weight: 700;
+  font-style: italic;
   font-size: 2rem;
   color: var(--burgundy);
-  font-style: italic;
   letter-spacing: 1px;
   text-align: center;
 }
@@ -102,7 +127,7 @@ html {
   font-family: var(--cormorant-sc);
   font-size: 1.3rem;
   color: var(--daria);
-  font-style: italic;
+  /* font-style: italic; */
   text-align: center;
 }
 
@@ -116,6 +141,11 @@ form {
   width: 100%;
   border: 1.5px solid var(--raspberry);
   box-shadow: 0 2px 12px 0 rgba(200, 24, 91, 0.07);
+}
+
+form > p
+{
+  font-family: var(--acumin-semicondensed-thinitalic);
 }
 
 .input {
@@ -366,7 +396,6 @@ button:hover {
   position: relative;
   z-index: 1;
   background: rgba(255, 255, 255, 0.5);
-  border-radius: 24px;
   box-shadow: 0 8px 32px 0 rgba(128, 0, 32, 0.13);
   padding: 48px 32px 40px 32px;
   display: flex;
@@ -379,10 +408,12 @@ button:hover {
 }
 
 .intro-title {
-  font-family: var(--cormorant-font);
+  font-family: var(--acumin-semicondensed-thinitalic);
+  font-stretch: semi-condensed;
+  font-weight: 100;
+  font-style: italic;
   font-size: 1.8rem;
   color: var(--burgundy);
-  font-style: italic;
   letter-spacing: 2px;
   margin-bottom: 12px;
   font-weight: 600;
@@ -483,4 +514,16 @@ button:hover {
   100% {
     transform: rotate(0deg);
   }
+}
+
+.reservation-slide label {
+  font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
+}
+.reservation-slide input,
+.reservation-slide select,
+.reservation-slide textarea {
+  font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
+}
+.reservation-slide button[type="submit"] {
+  font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
 }
