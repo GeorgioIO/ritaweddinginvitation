@@ -539,3 +539,57 @@ button:hover {
     -webkit-backdrop-filter: blur(3px);
   }
 }
+
+.required-anim {
+  display: none;
+  color: var(--gold);
+  font-size: 0.95em;
+  font-style: italic;
+  margin-left: 8px;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+.input:focus-within .required-anim {
+  display: inline;
+  animation: required-bounce 1.2s infinite alternate;
+}
+@keyframes required-bounce {
+  0% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(-3px) scale(1.08); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.8; }
+}
+#rsvp-btn.shake {
+  animation: shake-btn 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes shake-btn {
+  10%, 90% { transform: translateX(-2px); }
+  20%, 80% { transform: translateX(4px); }
+  30%, 50%, 70% { transform: translateX(-6px); }
+  40%, 60% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+#form-error-bar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background: var(--burgundy);
+  color: var(--gold);
+  font-family: var(--main-font-stack);
+  font-size: 1.08rem;
+  padding: 14px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(128,0,32,0.13);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(.36,.07,.19,.97), opacity 0.5s;
+  max-width: 90vw;
+  text-align: center;
+}
+#form-error-bar.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
