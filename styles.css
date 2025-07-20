@@ -45,18 +45,24 @@ html {
   scroll-behavior: smooth;
 }
 
+.bg-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: url('./images/back.jpg') center center / cover no-repeat;
+  pointer-events: none;
+}
 body {
   min-height: 100vh;
   font-family: var(--main-font-stack);
-  background: url("./images/back.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* Remove background-image and background-attachment from body */
+  background: none;
   padding: 20px;
   margin: 0;
 }
-
 body::before {
   content: "";
   position: fixed;
@@ -74,9 +80,7 @@ body,
 html {
   position: relative;
 }
-.main-content,
-#intro-overlay,
-.music-toggle {
+.main-content, #intro-overlay, .music-toggle, #music-tone {
   position: relative;
   z-index: 1;
 }
@@ -526,4 +530,12 @@ button:hover {
 }
 .reservation-slide button[type="submit"] {
   font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
+}
+@media (max-width: 600px) {
+  .reservation-slide,
+  .wedding-ceremony-slide,
+  .wedding-party-slide {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
 }
