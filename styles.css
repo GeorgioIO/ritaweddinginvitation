@@ -39,17 +39,23 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(30, 30, 30, 0.55);
   z-index: 0;
   pointer-events: none;
 }
-body, html {
+body,
+html {
   position: relative;
 }
-.main-content, #intro-overlay, .music-toggle {
+.main-content,
+#intro-overlay,
+.music-toggle {
   position: relative;
   z-index: 1;
 }
@@ -76,7 +82,7 @@ body, html {
   border-radius: 16px;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 4px 24px 0 rgba(128,0,32,0.08);
+  box-shadow: 0 4px 24px 0 rgba(128, 0, 32, 0.08);
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -109,7 +115,7 @@ form {
   border-radius: 12px;
   width: 100%;
   border: 1.5px solid var(--raspberry);
-  box-shadow: 0 2px 12px 0 rgba(200,24,91,0.07);
+  box-shadow: 0 2px 12px 0 rgba(200, 24, 91, 0.07);
 }
 
 .input {
@@ -146,7 +152,7 @@ form {
 }
 
 .heart {
-  --c: var(--raspberry);
+  --c: white;
   width: 50px;
   aspect-ratio: 1;
   background: radial-gradient(circle at 60% 65%, var(--c) 64%, #0000 65%) top
@@ -160,7 +166,7 @@ form {
 }
 
 input[type="radio"]:checked + .heart-label .heart {
-  box-shadow: 0 0 10px 5px var(--hot-pink);
+  --c: var(--raspberry);
   transform: scale(1.1);
 }
 
@@ -198,12 +204,16 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px 0 rgba(90,10,24,0.08);
+  box-shadow: 0 2px 8px 0 rgba(90, 10, 24, 0.08);
   letter-spacing: 1px;
 }
 
 button:hover {
-  background: linear-gradient(90deg, var(--raspberry) 60%, var(--hot-pink) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--raspberry) 60%,
+    var(--hot-pink) 100%
+  );
   color: var(--gold);
 }
 
@@ -218,12 +228,12 @@ button:hover {
   border-radius: 18px;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 4px 24px 0 rgba(128,0,32,0.10);
+  box-shadow: 0 4px 24px 0 rgba(128, 0, 32, 0.1);
   margin-bottom: 32px;
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 2px solid var(--gold);
+  /* border: 2px solid var(--gold); */
 }
 
 .ceremony-info {
@@ -244,7 +254,7 @@ button:hover {
   /* background: rgba(255,255,255,0.18); */
   border-radius: 8px;
   padding: 10px 14px;
-  box-shadow: 0 1px 6px 0 rgba(179,156,50,0.04);
+  box-shadow: 0 1px 6px 0 rgba(179, 156, 50, 0.04);
   /* border: 1.5px solid var(--gold); */
 }
 
@@ -281,13 +291,13 @@ button:hover {
   cursor: pointer;
   text-decoration: none;
   transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 2px 8px 0 rgba(90,10,24,0.10);
+  box-shadow: 0 2px 8px 0 rgba(90, 10, 24, 0.1);
   letter-spacing: 1px;
   font-family: var(--cormorant-font);
 }
 
 .ceremony-map-btn:hover {
-  background: linear-gradient(90deg, var(--raspberry) 60%, var(--hot-pink) 100%);
+  background: linear-gradient(90deg, var(--raspberry) 60%);
   color: var(--gold);
 }
 
@@ -302,33 +312,40 @@ button:hover {
   border-radius: 18px;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 4px 24px 0 rgba(128,0,32,0.10);
+  box-shadow: 0 4px 24px 0 rgba(128, 0, 32, 0.1);
   margin-bottom: 32px;
   background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 2px solid var(--gold);
-
+  /* border: 2px solid var(--gold); */
 }
 
-.wedding-ceremony-slide, .wedding-party-slide, .reservation-slide {
+.wedding-ceremony-slide,
+.wedding-party-slide,
+.reservation-slide {
   margin: 32px 0;
 }
 
 #intro-overlay::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   z-index: 0;
   pointer-events: none;
 }
 #intro-overlay {
   position: fixed;
   z-index: 1000;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   background: url("./images/back.jpg");
@@ -348,9 +365,9 @@ button:hover {
 .intro-content {
   position: relative;
   z-index: 1;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 24px;
-  box-shadow: 0 8px 32px 0 rgba(128,0,32,0.13);
+  box-shadow: 0 8px 32px 0 rgba(128, 0, 32, 0.13);
   padding: 48px 32px 40px 32px;
   display: flex;
   flex-direction: column;
@@ -386,7 +403,7 @@ button:hover {
   font-family: var(--cormorant-sc);
   font-weight: 600;
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 2px 8px 0 rgba(179,156,50,0.10);
+  box-shadow: 0 2px 8px 0 rgba(179, 156, 50, 0.1);
   letter-spacing: 1px;
 }
 .intro-buttons button:hover {
@@ -407,14 +424,14 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px 0 rgba(179,156,50,0.13);
+  box-shadow: 0 2px 8px 0 rgba(179, 156, 50, 0.13);
   cursor: pointer;
   transition: background 0.3s, box-shadow 0.3s;
 }
 
 .music-toggle:hover {
   background: var(--gold);
-  box-shadow: 0 4px 16px 0 rgba(128,0,32,0.13);
+  box-shadow: 0 4px 16px 0 rgba(128, 0, 32, 0.13);
 }
 .music-toggle svg {
   display: block;
@@ -443,16 +460,27 @@ button:hover {
   height: 36px;
   display: block;
   background: transparent;
-
 }
 #music-tone.playing svg {
   animation: music-shake 0.5s infinite linear;
 }
 @keyframes music-shake {
-  0% { transform: rotate(-15deg); }
-  20% { transform: rotate(10deg); }
-  40% { transform: rotate(-10deg); }
-  60% { transform: rotate(8deg); }
-  80% { transform: rotate(-8deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(8deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
