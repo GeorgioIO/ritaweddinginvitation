@@ -144,7 +144,7 @@ form {
   padding: 20px;
   border-radius: 12px;
   width: 100%;
-  border: 1.5px solid var(--raspberry);
+  border: 1.5px solid var(--gold);
   box-shadow: 0 2px 12px 0 rgba(200, 24, 91, 0.07);
 }
 
@@ -188,8 +188,8 @@ form > p
 }
 
 .heart {
-  --c: white;
-  width: 50px;
+  --c: rgba(0, 0, 0, 0.282);
+  width: 40px;
   aspect-ratio: 1;
   background: radial-gradient(circle at 60% 65%, var(--c) 64%, #0000 65%) top
       left/50% 50%,
@@ -202,7 +202,7 @@ form > p
 }
 
 input[type="radio"]:checked + .heart-label .heart {
-  --c: var(--burgundy);
+  --c: var(--gold);
   transform: scale(1.1);
 }
 
@@ -245,12 +245,8 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(
-    90deg,
-    var(--raspberry) 60%,
-    var(--hot-pink) 100%
-  );
-  color: var(--gold);
+  background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+  color: #6B4F1D;
 }
 
 .wedding-ceremony-slide {
@@ -333,8 +329,8 @@ button:hover {
 }
 
 .ceremony-map-btn:hover {
-  background: linear-gradient(90deg, var(--raspberry) 60%);
-  color: var(--gold);
+  background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+  color: #6B4F1D;
 }
 
 .wedding-party-slide {
@@ -470,8 +466,8 @@ button:hover {
   letter-spacing: 1px;
 }
 .intro-buttons button:hover {
-  background: var(--burgundy);
-  color: var(--gold);
+  background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+  color: #6B4F1D;
 }
 
 .music-toggle {
