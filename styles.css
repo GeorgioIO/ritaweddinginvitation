@@ -32,7 +32,7 @@
   --cormorant-font: "Cormorant Upright", serif;
   --cormorant-sc: "Cormorant SC", serif;
   --daria: #5a0a18;
-  --burgundy: #800020;
+  --burgundy: #84A6C0;
   --raspberry: #c2185b;
   --hot-pink: #e75480;
   --pink: #f8a5c2;
@@ -52,8 +52,9 @@ html {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  background: url('./images/back.jpg') center center / cover no-repeat;
+  /* background: url('./images/back.jpg') center center / cover no-repeat; */
   pointer-events: none;
+  background-color: white;
 }
 body {
   min-height: 100vh;
@@ -201,7 +202,7 @@ form > p
 }
 
 input[type="radio"]:checked + .heart-label .heart {
-  --c: var(--raspberry);
+  --c: var(--burgundy);
   transform: scale(1.1);
 }
 
@@ -303,14 +304,14 @@ button:hover {
 
 .ceremony-text {
   font-size: 1.3rem;
-  color: var(--daria);
+  color: #B76E79;
   font-family: var(--cormorant-sc);
   text-align: center;
 }
 
 .ceremony-timezone {
   font-size: 1rem;
-  color: var(--raspberry);
+  color: #B76E79;
   margin-left: 6px;
 }
 
@@ -370,10 +371,12 @@ button:hover {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 0;
   pointer-events: none;
+  z-index: -2;
 }
+
 #intro-overlay {
   position: fixed;
   z-index: 1000;
@@ -399,8 +402,8 @@ button:hover {
 }
 .intro-content {
   position: relative;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.5);
+  z-index: 4;
+  background: #00000075;
   box-shadow: 0 8px 32px 0 rgba(128, 0, 32, 0.13);
   padding: 48px 32px 40px 32px;
   display: flex;
@@ -410,6 +413,7 @@ button:hover {
   text-align: center;
   gap: 32px;
   height: 100%;
+
 }
 
 .intro-title {
@@ -418,10 +422,33 @@ button:hover {
   font-weight: 100;
   /* font-style: italic; */
   font-size: 1.8rem;
-  color: var(--burgundy);
+  color: #84A6C0;
   letter-spacing: 2px;
   margin-bottom: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  animation: float-cloud-3d 14s ease-in-out infinite;
+  transform-style: preserve-3d;
+  perspective: 400px;
+}
+@keyframes float-cloud-3d {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.00) rotateY(0deg) rotateX(0deg);
+  }
+  20% {
+    transform: translate3d(4px, -3px, 6px) scale(1.01) rotateY(4deg) rotateX(-2deg);
+  }
+  40% {
+    transform: translate3d(-4px, -6px, 10px) scale(1.01) rotateY(-4deg) rotateX(2deg);
+  }
+  60% {
+    transform: translate3d(-6px, 0px, 4px) scale(1.00) rotateY(-2deg) rotateX(0deg);
+  }
+  80% {
+    transform: translate3d(4px, 3px, 0px) scale(1.00) rotateY(2deg) rotateX(2deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.00) rotateY(0deg) rotateX(0deg);
+  }
 }
 .intro-buttons {
   display: flex;
@@ -545,7 +572,7 @@ button, .ceremony-map-btn, .intro-buttons button {
 }
 
 .asterisk {
-  color: var(--gold);
+  color: #B76E79;
   font-size: 1.1em;
   font-weight: bold;
   margin-left: 5px;
