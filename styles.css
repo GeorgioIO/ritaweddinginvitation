@@ -270,6 +270,8 @@ button:hover {
 
 .ceremony-info {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 16px;
   width: 100%;
@@ -312,7 +314,9 @@ button:hover {
 }
 
 .ceremony-map-btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10px;
   padding: 10px 24px;
   font-size: 1.1rem;
