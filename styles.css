@@ -267,6 +267,38 @@ button:hover {
   /* border: 2px solid var(--gold); */
 }
 
+.whish-slide
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 24px 24px 24px;
+  /* background: linear-gradient(120deg, var(--off-white) 80%, var(--pink) 100%); */
+  background-color: white;
+  border-radius: 18px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 24px 0 rgba(128, 0, 32, 0.1);
+  margin-bottom: 32px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* border: 2px solid var(--gold); */
+}
+
+.whish-text
+{
+  font-family: var(--cormorant-sc);
+  text-align: center;
+}
+
+.whish-acc
+{
+  font-family: var(--acumin-semicondensed-thinitalic);
+  text-align: center;
+}
+
 .ceremony-info {
   display: flex;
   align-items: center;
