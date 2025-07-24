@@ -9,7 +9,10 @@
   <body>
     <div class="bg-fixed"></div>
     <div id="intro-overlay">
-      <div class="intro-content">
+      <div class="intro-images">
+        <img id="intro-invitation-img" src="images/intro-invitation.jpg" alt="Intro Invitation" style="position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:0;opacity:1;transition:opacity 0.7s;" />
+      </div>
+      <div class="intro-content" style="position:relative;z-index:2;">
         <h1 class="intro-title">
           Welcome to Chahid Frangieh and Rita Abou Nader Wedding Invitation
         </h1>
@@ -25,7 +28,11 @@
       src="Ed Sheeran - Perfect.mp3"
       loop
     ></audio>
+    
     <div class="main-content">
+      <div class="card-invitation-slide">
+        <img src="images/card-invitation.jpg" alt="Card Invitation" />
+      </div>
       <div class="wedding-ceremony-slide">
         <h2 class="slide-title">Wedding Ceremony</h2>
         <div class="ceremony-info">
@@ -277,6 +284,18 @@
         overlay.classList.add("hide");
         setTimeout(() => {
           overlay.style.display = "none";
+          // Show card-invitation overlay
+          const cardOverlay = document.getElementById('card-invitation-overlay');
+          if (cardOverlay) {
+            cardOverlay.style.display = 'flex';
+            cardOverlay.style.opacity = '1';
+            setTimeout(() => {
+              cardOverlay.style.opacity = '0';
+              setTimeout(() => {
+                cardOverlay.style.display = 'none';
+              }, 700);
+            }, 6000); // Show for 2 seconds
+          }
         }, 600);
       }
 
