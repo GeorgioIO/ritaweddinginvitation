@@ -263,7 +263,7 @@
           </div>
           <div class="input" id="guest-name">
             <label for="guestName"
-              >Your Name <span class="asterisk">*</span></label
+              >Your name<span class="asterisk">*</span></label
             >
             <input
               type="text"
@@ -438,17 +438,6 @@
           });
         });
 
-      // Error bar logic
-      // const errorBar = document.getElementById('form-error-bar'); // This line is no longer needed
-      // let errorBarTimeout = null; // This line is no longer needed
-      // function showErrorBar(msg) { // This line is no longer needed
-      //   errorBar.textContent = msg; // This line is no longer needed
-      //   errorBar.classList.add('show'); // This line is no longer needed
-      //   if (errorBarTimeout) clearTimeout(errorBarTimeout); // This line is no longer needed
-      //   errorBarTimeout = setTimeout(() => { // This line is no longer needed
-      //     errorBar.classList.remove('show'); // This line is no longer needed
-      //   }, 3000); // This line is no longer needed
-      // } // This line is no longer needed
       reservationForm.addEventListener("submit", function (e) {
         let valid = true;
         let errors = [];
