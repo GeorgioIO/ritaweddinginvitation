@@ -8,31 +8,33 @@
 }
 
 @font-face {
-  font-family: 'Belfast';
-  src: url('./Belfast-Regular.otf') format('opentype');
+  font-family: "Belfast";
+  src: url("./Belfast-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Aerotis';
-  src: url('./Aerotis.ttf') format('truetype');
+  font-family: "Aerotis";
+  src: url("./Aerotis.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Acumin Variable Concept';
-  src: url('./Acumin-Variable-Concept.ttf') format('truetype');
+  font-family: "Acumin Variable Concept";
+  src: url("./Acumin-Variable-Concept.ttf") format("truetype");
   font-weight: 100 900;
   font-stretch: 50% 125%;
   font-style: normal italic;
 }
 :root {
-  --main-font-stack: 'Belfast', 'Century Gothic', 'Aerotis', 'Javanese Text', 'Acumin Variable Concept', Arial, sans-serif;
-  --acumin-semicondensed-thinitalic: 'Acumin Variable Concept', Arial, sans-serif;
+  --main-font-stack: "Belfast", "Century Gothic", "Aerotis", "Javanese Text",
+    "Acumin Variable Concept", Arial, sans-serif;
+  --acumin-semicondensed-thinitalic: "Acumin Variable Concept", Arial,
+    sans-serif;
   --cormorant-font: "Cormorant Upright", serif;
   --cormorant-sc: "Cormorant SC", serif;
   --daria: #5a0a18;
-  --burgundy: #84A6C0;
+  --burgundy: #84a6c0;
   --raspberry: #c2185b;
   --hot-pink: #e75480;
   --pink: #f8a5c2;
@@ -81,7 +83,10 @@ body,
 html {
   position: relative;
 }
-.main-content, #intro-overlay, .music-toggle, #music-tone {
+.main-content,
+#intro-overlay,
+.music-toggle,
+#music-tone {
   position: relative;
   z-index: 1;
 }
@@ -113,8 +118,6 @@ html {
   -webkit-backdrop-filter: blur(12px);
 }
 
-
-
 .slide-title {
   font-family: var(--acumin-semicondensed-thinitalic);
   font-stretch: semi-condensed;
@@ -143,12 +146,11 @@ form {
   padding: 20px;
   border-radius: 12px;
   width: 100%;
-  border: 1.5px solid #3C4C5A;
+  border: 1.5px solid #3c4c5a;
   box-shadow: 0 2px 12px 0 rgba(200, 24, 91, 0.07);
 }
 
-form > p
-{
+form > p {
   font-family: var(--acumin-semicondensed-thinitalic);
 }
 
@@ -201,7 +203,7 @@ form > p
 }
 
 input[type="radio"]:checked + .heart-label .heart {
-  --c: #3C4C5A;
+  --c: #3c4c5a;
   transform: scale(1.1);
 }
 
@@ -244,7 +246,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(90deg, #3C4C5A 0%, #3C4C5A 100%);
+  background: linear-gradient(90deg, #3c4c5a 0%, #3c4c5a 100%);
   color: white;
 }
 
@@ -267,8 +269,8 @@ button:hover {
   /* border: 2px solid var(--gold); */
 }
 
-.whish-slide
-{
+.whish-slide,
+.reservation-success-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,15 +289,25 @@ button:hover {
   /* border: 2px solid var(--gold); */
 }
 
-.whish-text
-{
+.reservation-success-slide {
+  justify-content: center;
+  height: 300px;
+  margin-top: 30px;
+}
+
+.whish-text {
   font-family: var(--cormorant-sc);
   text-align: center;
 }
 
-.whish-acc
-{
+.whish-acc {
   font-family: var(--acumin-semicondensed-thinitalic);
+  text-align: center;
+}
+
+.reservation-text {
+  font-family: var(--acumin-semicondensed-thinitalic);
+  font-size: 1.5;
   text-align: center;
 }
 
@@ -333,14 +345,14 @@ button:hover {
 
 .ceremony-text {
   font-size: 1.3rem;
-  color: #3C4C5A;
+  color: #3c4c5a;
   font-family: var(--cormorant-sc);
   text-align: center;
 }
 
 .ceremony-timezone {
   font-size: 1rem;
-  color: #3C4C5A;
+  color: #3c4c5a;
   margin-left: 6px;
 }
 
@@ -364,7 +376,7 @@ button:hover {
 }
 
 .ceremony-map-btn:hover {
-  background: linear-gradient(90deg, #3C4C5A 0%, #3C4C5A 100%);
+  background: linear-gradient(90deg, #3c4c5a 0%, #3c4c5a 100%);
   color: white;
 }
 
@@ -444,7 +456,6 @@ button:hover {
   text-align: center;
   gap: 32px;
   height: 100%;
-
 }
 
 .intro-title {
@@ -453,7 +464,7 @@ button:hover {
   font-weight: 100;
   /* font-style: italic; */
   font-size: 1.8rem;
-  color: #84A6C0;
+  color: #84a6c0;
   letter-spacing: 2px;
   margin-bottom: 12px;
   font-weight: 700;
@@ -463,22 +474,24 @@ button:hover {
 }
 @keyframes float-cloud-3d {
   0% {
-    transform: translate3d(0, 0, 0) scale(1.00) rotateY(0deg) rotateX(0deg);
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg) rotateX(0deg);
   }
   20% {
-    transform: translate3d(4px, -3px, 6px) scale(1.01) rotateY(4deg) rotateX(-2deg);
+    transform: translate3d(4px, -3px, 6px) scale(1.01) rotateY(4deg)
+      rotateX(-2deg);
   }
   40% {
-    transform: translate3d(-4px, -6px, 10px) scale(1.01) rotateY(-4deg) rotateX(2deg);
+    transform: translate3d(-4px, -6px, 10px) scale(1.01) rotateY(-4deg)
+      rotateX(2deg);
   }
   60% {
-    transform: translate3d(-6px, 0px, 4px) scale(1.00) rotateY(-2deg) rotateX(0deg);
+    transform: translate3d(-6px, 0px, 4px) scale(1) rotateY(-2deg) rotateX(0deg);
   }
   80% {
-    transform: translate3d(4px, 3px, 0px) scale(1.00) rotateY(2deg) rotateX(2deg);
+    transform: translate3d(4px, 3px, 0px) scale(1) rotateY(2deg) rotateX(2deg);
   }
   100% {
-    transform: translate3d(0, 0, 0) scale(1.00) rotateY(0deg) rotateX(0deg);
+    transform: translate3d(0, 0, 0) scale(1) rotateY(0deg) rotateX(0deg);
   }
 }
 .intro-buttons {
@@ -501,7 +514,7 @@ button:hover {
   letter-spacing: 1px;
 }
 .intro-buttons button:hover {
-  background: linear-gradient(90deg, #3C4C5A 0%, #3C4C5A 100%);
+  background: linear-gradient(90deg, #3c4c5a 0%, #3c4c5a 100%);
   color: white;
 }
 
@@ -549,7 +562,7 @@ button:hover {
   justify-content: center;
 }
 #music-tone svg {
-  color: #3C4C5A;
+  color: #3c4c5a;
   width: 36px;
   height: 36px;
   display: block;
@@ -580,18 +593,20 @@ button:hover {
 }
 
 .reservation-slide label {
-  font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
+  font-family: "Acumin Variable Concept", "Century Gothic", Arial, sans-serif;
 }
 .reservation-slide input,
 .reservation-slide select,
 .reservation-slide textarea {
-  font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
+  font-family: "Acumin Variable Concept", "Century Gothic", Arial, sans-serif;
 }
 .reservation-slide button[type="submit"] {
-  font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
+  font-family: "Acumin Variable Concept", "Century Gothic", Arial, sans-serif;
 }
-button, .ceremony-map-btn, .intro-buttons button {
-  font-family: 'Acumin Variable Concept', 'Century Gothic', Arial, sans-serif;
+button,
+.ceremony-map-btn,
+.intro-buttons button {
+  font-family: "Acumin Variable Concept", "Century Gothic", Arial, sans-serif;
 }
 @media (max-width: 600px) {
   .reservation-slide,
@@ -603,7 +618,7 @@ button, .ceremony-map-btn, .intro-buttons button {
 }
 
 .asterisk {
-  color: #B76E79;
+  color: #b76e79;
   font-size: 1.1em;
   font-weight: bold;
   margin-left: 5px;
@@ -611,14 +626,29 @@ button, .ceremony-map-btn, .intro-buttons button {
 }
 
 #rsvp-btn.shake {
-  animation: shake-btn 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake-btn 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 @keyframes shake-btn {
-  10%, 90% { transform: translateX(-2px); }
-  20%, 80% { transform: translateX(4px); }
-  30%, 50%, 70% { transform: translateX(-6px); }
-  40%, 60% { transform: translateX(6px); }
-  100% { transform: translateX(0); }
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-6px);
+  }
+  40%,
+  60% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .card-invitation-slide {

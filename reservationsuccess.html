@@ -8,39 +8,41 @@
   </head>
   <body>
     <div class="bg-fixed"></div>
-    <div id="intro-overlay">
-      <div class="intro-images">
-        <img
-          id="intro-invitation-img"
-          src="images/intro-invitation.jpg"
-          alt="Intro Invitation"
-          style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            z-index: 0;
-            opacity: 1;
-            transition: opacity 0.7s;
-          "
-        />
-      </div>
-      <div class="intro-content" style="position: relative; z-index: 2">
-        <h1 class="intro-title">
-          Welcome to Chahid Frangieh and Rita Abou Nader Wedding Invitation
-        </h1>
-
-        <div class="intro-buttons">
-          <button id="open-with-music">Open with Music</button>
-          <button id="open-without-music">Open without Music</button>
-        </div>
-      </div>
-    </div>
-    <audio id="wedding-music" src="Ed Sheeran - Perfect.mp3" loop></audio>
-
     <div class="main-content">
+      <div class="reservation-success-slide">
+        <p class="reservation-text">Reservation submitted successfully</p>
+        <svg
+          width="45px"
+          height="45px"
+          viewBox="0 -1 32 32"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+        >
+          <g
+            id="Page-1"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+            sketch:type="MSPage"
+          >
+            <g
+              id="Icon-Set-Filled"
+              sketch:type="MSLayerGroup"
+              transform="translate(-102.000000, -882.000000)"
+              fill="#3C4C5A"
+            >
+              <path
+                d="M126,882 C122.667,882 119.982,883.842 117.969,886.235 C116.013,883.76 113.333,882 110,882 C105.306,882 102,886.036 102,890.438 C102,892.799 102.967,894.499 104.026,896.097 L116.459,911.003 C117.854,912.312 118.118,912.312 119.513,911.003 L131.974,896.097 C133.22,894.499 134,892.799 134,890.438 C134,886.036 130.694,882 126,882"
+                id="heart-like"
+                sketch:type="MSShapeGroup"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </div>
       <div class="card-invitation-slide">
         <img src="images/card-invitation.jpg" alt="Card Invitation" />
       </div>
@@ -207,63 +209,6 @@
           </g>
           <g id="Layer_1" />
         </svg>
-      </div>
-      <div class="reservation-slide">
-        <h2 class="slide-title">Be Our Guest</h2>
-        <p class="reservation-deadline">Please reply before August 20, 2025</p>
-        <form
-          method="POST"
-          action="https://formsubmit.co/georgiojabbour.g.gj@gmail.com"
-          id="reservation-form"
-          autocomplete="off"
-        >
-          <!-- HONEYPOT  -->
-          <input type="text" name="_honey" style="display: none" />
-
-          <!-- Disable captcha -->
-          <input type="hidden" name="_captcha" value="false" />
-
-          <!-- Redirect -->
-          <input
-            type="hidden"
-            name="_next"
-            value="https://ritamakeupartist.vercel.app/"
-          />
-
-          <div class="input" id="attending">
-            <label>Are you attending?</label>
-            <div class="attending-selection-container">
-              <div class="attending-radio-container">
-                <input
-                  type="radio"
-                  name="attendance"
-                  id="attending-yes"
-                  value="Yes attending"
-                  hidden
-                />
-                <label for="attending-yes" class="heart-label">
-                  <div class="heart"></div>
-                  <p>Yes Attending</p>
-                </label>
-              </div>
-              <div class="attending-radio-container">
-                <input
-                  type="radio"
-                  name="attendance"
-                  id="attending-no"
-                  value="Not attending"
-                  hidden
-                />
-                <label for="attending-no" class="heart-label">
-                  <div class="heart"></div>
-                  <p>Not Attending</p>
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <button id="rsvp-btn">RSVP</button>
-        </form>
       </div>
     </div>
     <button
